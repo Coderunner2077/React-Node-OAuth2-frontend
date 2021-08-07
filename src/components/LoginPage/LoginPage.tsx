@@ -16,11 +16,11 @@ function LoginPage() {
         <div className={styles.loginPage}>
             <div className={styles.loginForm}>
                 <h1>Login</h1>
-                <div className={styles.googleContainer} onClick={loginGoogle}>
+                <div className={`${styles.loginButton} ${styles.google}`} onClick={loginGoogle}>
                     <img src={googleImage} alt="Google Icon" />
                     <p>Login With Google</p>
                 </div>
-                <div className={styles.facebookContainer} onClick={loginFacebook}>
+                <div className={`${styles.loginButton} ${styles.facebook}`} onClick={loginFacebook}>
                     <img src={facebookImage} alt="Google Icon" />
                     <p>Login With Facebook</p>
                 </div>

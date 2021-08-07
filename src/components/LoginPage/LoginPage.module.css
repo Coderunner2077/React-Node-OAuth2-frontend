@@ -11,30 +11,31 @@
     margin-bottom: 20px;
 }
 
-.loginButton.google {
-    background: #4385f5;
-}
-
 .loginButton img {
     width: 15%;
     height: 80%;
-    background-color: white;
     object-fit: contain;
     left: 10px;
     border-radius: 3px;
     position: absolute;
 }
 
+.loginButton.google {
+    background: #4385f5;
+}
 
 .loginButton.facebook {
     background: #4872c5;
+}
+
+.loginButton.github {
+    background: rgb(56, 56, 56);
 }
 
 .loginPage {
     width: 100vw;
     display: flex;
     justify-content: center;
-    
 }
 
 .loginForm {

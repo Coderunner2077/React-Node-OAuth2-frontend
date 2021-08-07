@@ -1,28 +1,38 @@
 import React from 'react'
 import googleImage from "../../assets/googleImage.png";
 import facebookImage from "../../assets/facebookImage.png";
+import githubImage from "../../assets/githubImage.png";
 import styles from "./LoginPage.module.css";
 
 function LoginPage() {
-    const loginGoogle = () => {
-        window.open("http://localhost:4000/auth/google", "_self");
+    const apiURI = "http://localhost:4000/auth";
+    const googleLogin = () => {
+        window.open(`${apiURI}/google`, "_self");
     }
 
-    const loginFacebook = () => {
-        window.open("http://localhost:4000/auth/facebook", "_self");
+    const facebookLogin = () => {
+        window.open(`${apiURI}/facebook`, "_self");
+    }
+
+    const githubLogin = () => {
+        window.open(`${apiURI}/github`, "_self");
     }
 
     return (
         <div className={styles.loginPage}>
             <div className={styles.loginForm}>
                 <h1>Login</h1>
-                <div className={`${styles.loginButton} ${styles.google}`} onClick={loginGoogle}>
+                <div className={`${styles.loginButton} ${styles.google}`} onClick={googleLogin}>
                     <img src={googleImage} alt="Google Icon" />
                     <p>Login With Google</p>
                 </div>
-                <div className={`${styles.loginButton} ${styles.facebook}`} onClick={loginFacebook}>
-                    <img src={facebookImage} alt="Google Icon" />
+                <div className={`${styles.loginButton} ${styles.facebook}`} onClick={facebookLogin}>
+                    <img src={facebookImage} alt="Facebook Icon" />
                     <p>Login With Facebook</p>
+                </div>
+                <div className={`${styles.loginButton} ${styles.github}`} onClick={githubLogin}>
+                    <img src={githubImage} alt="Githun Icon" />
+                    <p>Login With Github</p>
                 </div>
             </div>
         </div>

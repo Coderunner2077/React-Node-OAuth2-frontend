@@ -3,6 +3,8 @@ import googleImage from "../../assets/googleImage.png";
 import facebookImage from "../../assets/facebookImage.png";
 import githubImage from "../../assets/githubImage.png";
 import styles from "./LoginPage.module.css";
+import { myContext } from "../../AuthContext";
+import { useContext, useEffect } from 'react';
 
 function LoginPage() {
     const apiURI = "http://localhost:4000/auth";

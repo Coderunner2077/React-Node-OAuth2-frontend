@@ -17,6 +17,7 @@
 
 .navbar li {
     cursor: pointer;
+    color: white;
 }
 
 .navbar li a {

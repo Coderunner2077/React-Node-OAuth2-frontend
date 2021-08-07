@@ -12,4 +12,4 @@ function Homepage(props: Props) {
     )
 }
 
-export default Homepage
+export default Homepage;

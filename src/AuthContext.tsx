@@ -6,13 +6,15 @@ export const myContext = createContext({});
 
 function AuthContext(props: any) {
     const { children} = props;
-    const [currentUser, setCurrentUser] = useState(false);
+    const [currentUser, setCurrentUser] = useState<any>(false);
 
     useEffect(() =>{
         axios.get("http://localhost:4000/auth/user", { withCredentials: true }) // the option makes sure api is aware of browser cookies
             .then((res: AxiosResponse) => {
                 if(res.data)
                     setCurrentUser(res.data);
+                else
+                    setCurrentUser(null);
             });
     }, []);
 

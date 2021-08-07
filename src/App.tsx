@@ -13,7 +13,9 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/" exact component={Homepage} />
-        <Route path="/login" component={LoginPage} />
+        {!currentUser && (
+          <Route path="/login" component={LoginPage} />
+        )}
       </Switch>
     </div>
   );

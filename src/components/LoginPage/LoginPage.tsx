@@ -3,11 +3,10 @@ import googleImage from "../../assets/googleImage.png";
 import facebookImage from "../../assets/facebookImage.png";
 import githubImage from "../../assets/githubImage.png";
 import styles from "./LoginPage.module.css";
-import { myContext } from "../../AuthContext";
-import { useContext, useEffect } from 'react';
 
 function LoginPage() {
     const apiURI = "http://localhost:4000/auth";
+    
     const googleLogin = () => {
         window.open(`${apiURI}/google`, "_self");
     }
@@ -33,7 +32,7 @@ function LoginPage() {
                     <p>Login With Facebook</p>
                 </div>
                 <div className={`${styles.loginButton} ${styles.github}`} onClick={githubLogin}>
-                    <img src={githubImage} alt="Githun Icon" />
+                    <img src={githubImage} alt="Github Icon" />
                     <p>Login With Github</p>
                 </div>
             </div>

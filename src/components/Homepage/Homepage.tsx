@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { myContext } from "../../AuthContext";
+import { IUser } from "../../types/types";
 
-interface Props {}
-
-function Homepage(props: Props) {
-    const {} = props
-
+function Homepage() {
+    const user = useContext(myContext) as IUser;
     return (
         <div>
-            <h1>Welcome To My Website</h1>
+            {
+                user ? (
+                    <h1>Welcome back {user.username}</h1>
+                ) : (
+                    <h1>Welcome To My Website</h1>
+                )
+            }
         </div>
     )
 }

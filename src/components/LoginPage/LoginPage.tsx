@@ -5,7 +5,7 @@ import githubImage from "../../assets/githubImage.png";
 import styles from "./LoginPage.module.css";
 
 function LoginPage() {
-    const apiURI = "http://localhost:4000/auth";
+    const apiURI = "https://react-node-oauth2-backend.herokuapp.com/auth";
     
     const googleLogin = () => {
         window.open(`${apiURI}/google`, "_self");

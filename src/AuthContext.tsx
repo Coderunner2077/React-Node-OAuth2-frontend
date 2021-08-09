@@ -9,7 +9,7 @@ function AuthContext(props: any) {
     const [currentUser, setCurrentUser] = useState<any>(false);
 
     useEffect(() =>{
-        axios.get("http://localhost:4000/auth/user", { withCredentials: true }) // the option makes sure api is aware of browser cookies
+        axios.get("https://react-node-oauth2-backend.herokuapp.com/auth/user", { withCredentials: true }) // the option makes sure api is aware of browser cookies
             .then((res: AxiosResponse) => {
                 if(res.data)
                     setCurrentUser(res.data);

@@ -9,9 +9,9 @@ function Navbar() {
     const currentUser = useContext(myContext);
     
     const logout = () => {
-        axios.get("http://localhost:4000/auth/logout", { withCredentials: true })
+        axios.get("https://react-node-oauth2-backend.herokuapp.com/auth/logout", { withCredentials: true })
             .then((res) => {
-                if(res.data) {
+                if(res.data === "success") {
                     window.location.href= "/";
                 }
             })

@@ -16,7 +16,7 @@ function LoginPage() {
     }
 
     const githubLogin = () => {
-        window.open(`${apiURI}/github`, "_self");
+        window.location.href = `${apiURI}/github`;
     }
 
     return (

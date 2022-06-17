@@ -5,19 +5,18 @@ import axios, { AxiosResponse } from "axios";
 export const myContext = createContext({});
 
 function AuthContext(props: any) {
-    const { children} = props;
+    const { children } = props;
     const [currentUser, setCurrentUser] = useState<any>(false);
 
-    useEffect(() =>{
-        axios.get("https://react-node-oauth2-backend.herokuapp.com/auth/user", { withCredentials: true }) // the option makes sure api is aware of browser cookies
+    useEffect(() => {
+        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/auth/user`, { withCredentials: true }) // the option makes sure api is aware of browser cookies
             .then((res: AxiosResponse) => {
-                if(res.data)
+                if (res.data)
                     setCurrentUser(res.data);
                 else
                     setCurrentUser(null);
             });
     }, []);
-
     return (
         <myContext.Provider value={currentUser}>
             {children}

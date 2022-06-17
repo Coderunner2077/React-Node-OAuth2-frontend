@@ -1,6 +1,28 @@
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## React-Node-OAuth2-backend -> The Repository for the Frontend of the React-Node-OAuth project
+
+## Introduction
+
+This is the Github Repo I recreated after following the video of NathanielWoodbury on Youtube.
+
+That video can be found here: [OAuth2.0 React + Passport Course | Full Dev & Deployment](https://www.youtube.com/watch?v=cD17CYA1dck&ab_channel=NathanielWoodbury)
+
+This code is ready to be deployed to Netlify (it is production ready on the main branch)
+
+When deploying this code ensure that you fill out the ENVIORNMENT variables when deploying, so that the application runs.
+
+## Environment variables
+The only environment variable you need to set for the frontend is the following:
+**REACT_APP_API_ENDPOINT**
+And the value of this variable must be the api endpoint url of your backend.
+
+## Related Projects:
+
+[React Node OAuth2 Backend](https://github.com/Coderunner2077/React-Node-OAuth2-backend) -> Backend of the api I reacreated after watching the same video
 
 ## Available Scripts
 

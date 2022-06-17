@@ -7,12 +7,12 @@ import axios from "axios";
 
 function Navbar() {
     const currentUser = useContext(myContext);
-    
+
     const logout = () => {
-        axios.get("https://react-node-oauth2-backend.herokuapp.com/auth/logout", { withCredentials: true })
+        axios.get(`${process.env.REACT_APP_API_ENDPOINT}/auth/logout`, { withCredentials: true })
             .then((res) => {
-                if(res.data === "success") {
-                    window.location.href= "/";
+                if (res.data === "success") {
+                    window.location.href = "/";
                 }
             })
             .catch(err => {

@@ -1,4 +1,4 @@
-import React, { useContext} from 'react';
+import React, { useContext } from 'react';
 import Homepage from './components/Homepage/Homepage';
 import LoginPage from './components/LoginPage/LoginPage';
 import { Switch, Route } from "react-router-dom";
